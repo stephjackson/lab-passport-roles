@@ -1,0 +1,25 @@
+<h2>Add Employee</h2>
+
+<form action="/addemployee" method="POST">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" required>
+  <br><br>
+  <label for="name">First Name</label>
+  <input id="name" type="text" name="name" required>
+  <br><br>
+  <label for="familyname">Family Name</label>
+  <input id="familyname" type="text" name="familyname" required>
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" required>
+  <label for="role">Role</label>
+  <input type="radio" name="role" value="Developer">Developer
+  <input type="radio" name="role" value="TA">TA
+
+  <% if (typeof message !== "undefined") { %>
+    <div class="error-message"><%= message %></div>
+  <% } %>
+  <br><br>
+
+  <button type="submit">Create account</button>
+</form>

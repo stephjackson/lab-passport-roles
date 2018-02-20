@@ -1,0 +1,10 @@
+<ul>
+    <% users.forEach((user) => { %>
+      <li>
+        <%= user.name %> - 
+        <form action="/<%= user._id %>/delete" method="POST">
+          <button type="submit">Delete Product</button>
+        </form>
+      </li>
+    <%  }) %>
+  </ul>
