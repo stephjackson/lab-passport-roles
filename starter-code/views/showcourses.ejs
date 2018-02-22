@@ -1,0 +1,12 @@
+<ul>
+  <% courses.forEach((course) => { %>
+    <li>
+      <%= course.name %> -
+        <a href="/<%= course._id %>">Course Profile</a>
+        <a href="/<%= course._id %>/editcourse">Edit Course</a>
+        <form action="/<%= course._id %>/deletecourse" method="POST">
+          <button type="submit">Delete Course</button>
+        </form>
+    </li>
+    <%  }) %>
+</ul>

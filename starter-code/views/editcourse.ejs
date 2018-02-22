@@ -1,0 +1,36 @@
+<h2>Add Course</h2>
+
+<!-- const courseSchema = new Schema({
+  name: String,
+  startingDate: Date,
+  endDate: Date,
+  level: String,
+  available: Boolean
+}) -->
+
+<form action="/<%= course._id %>/editcourse" method="POST">
+  <label for="name">Course Name</label>
+  <input id="name" type="text" name="name" value="<%= course.name %>" required>
+  <br>
+  <br>
+  <label for="startingDate">Starting Date</label>
+  <input id="startingDate" type="date" name="startingDate" value="<%= course.startingDate %>" required>
+  <br>
+  <br>
+  <label for="endDate">End Date</label>
+  <input id="endDate" type="date" name="endDate" value="<%= course.endDate %>" required>
+  <br>
+  <br>
+  <label for="level">Level</label>
+  <input id="level" type="text" name="level" value="<%= course.level %>" required>
+
+  <% if (typeof message !== "undefined") { %>
+    <div class="error-message">
+      <%= message %>
+    </div>
+    <% } %>
+      <br>
+      <br>
+
+      <button type="submit">Create Course</button>
+</form>

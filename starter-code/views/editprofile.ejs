@@ -1,0 +1,24 @@
+<h2>Add Employee</h2>
+
+<form action="/<%= user._id%>/edituser" method="POST">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" value="<%= user.username %>" required>
+  <br>
+  <br>
+  <label for="name">First Name</label>
+  <input id="name" type="text" name="name" value="<%= user.name %>" required>
+  <br>
+  <br>
+  <label for="familyName">Family Name</label>
+  <input id="familyName" type="text" name="familyName" value="<%= user.familyName %>" required>
+
+  <% if (typeof message !== "undefined") { %>
+    <div class="error-message">
+      <%= message %>
+    </div>
+    <% } %>
+      <br>
+      <br>
+
+      <button type="submit">Edit Profile</button>
+</form>
